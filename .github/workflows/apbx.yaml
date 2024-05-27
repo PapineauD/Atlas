@@ -16,6 +16,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
+          ref: ${{ github.ref }}
+          token: ${{ secrets.AtlasOS }}
 
       - name: Get changed files
         id: changed-files
